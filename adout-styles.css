@@ -1,0 +1,80 @@
+body {
+    background-color: #860049;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.square {
+    width: calc(100vw - 60px);
+    height: calc(100vh - 60px);
+    background-color: #E768AD;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-x: auto; /* Горизонтальная прокрутка если много картинок */
+}
+
+/* Каждая картинка и подпись */
+.image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #9b1c68;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Контейнер для картинки (ссылка) */
+.image-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: transparent;
+    aspect-ratio: auto;
+    transition: transform 0.3s ease; /* Лёгкая анимация */
+}
+
+/* Анимация при наведении */
+.image-box a:hover {
+    transform: scale(1.05);
+}
+
+/* Сами картинки */
+.image-box img {
+    width: 100%;
+    height: auto;
+    object-fit: contain; /* Вписывается полностью, ничего не обрезается */
+    background-color: transparent;
+    border-radius: 8px; /* Скругляем все картинки */
+}
+
+/* Подпись под картинкой */
+.image-box span {
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    width: fit-content;
+}
+
